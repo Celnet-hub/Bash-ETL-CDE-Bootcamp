@@ -3,14 +3,14 @@
 # exit script if any command fails
 set -e
 
-if [ $# -lt 3 ]; then
-  echo "Usage: $0 <input.csv> <old_col_name_name> <new_col_name>"
-  exit 1
-fi
+# if [ $# -lt 3 ]; then
+#   echo "Usage: $0 <input.csv> <old_col_name_name> <new_col_name>"
+#   exit 1
+# fi
 
-INPUT="$1"
-old_col_name="$2"
-new_col_name="$3"
+INPUT="/home/dubem/data-engineering/CDE_CORE/assignments/git_linux/raw/annual-enterprise-survey-2023-financial-year-provisional.csv"
+old_col_name="Variable_code"
+new_col_name="variable_code"
 cols_to_keep="Year,Value,Units,variable_code"
 
 output_dir="Transformed"
